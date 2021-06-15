@@ -11,11 +11,11 @@ expect(promoBanner).toBeDisplayed();
 
 it('should show the banner title',() =>{
     const infoTitle = $('//span[text()="Watches"]');
-    expect (infoTitle).toHaveText('Watches');
+    expect (infoTitle).toHaveText('cvbnm');
 })
 
 it('should contain link on banner button and verify its clickable', () => {
-    const watchesButton = $('//span[text()="hjknbv"]');
+    const watchesButton = $('//span[text()="Watches"]');
     expect(watchesButton).toHaveLinkContaining('/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0');
     expect(watchesButton).toBeClickable();
 });
