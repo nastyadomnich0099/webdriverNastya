@@ -15,9 +15,9 @@ it('should show the banner title',() =>{
 })
 
 it('should contain link on banner button and verify its clickable', () => {
-    const shopButton = $('//span[text()="Watches"]');
-    expect(shopButton).toHaveLinkContaining('/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0');
-    expect(shopButton).toBeClickable();
+    const watchesButton = $('//span[text()="Watches"]');
+    expect(watchesButton).toHaveLinkContaining('/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0');
+    expect(watchesButton).toBeClickable();
 });
 
 it('should click on watch section', async  () => {

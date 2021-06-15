@@ -36,6 +36,7 @@ it('should redirect to a new page and verify the title', () =>{
 
 it('should update the search category', ()=>{
     const category = $('#gh-cat option:nth-child(1)');
+
     expect(category).toHaveText('PC Laptops & Netbooks');
 })
 
