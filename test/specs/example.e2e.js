@@ -15,7 +15,7 @@ it('should show the banner title',() =>{
 })
 
 it('should contain link on banner button and verify its clickable', () => {
-    const watchesButton = $('//span[text()="Watches"]');
+    const watchesButton = $('//span[text()="hjknbv"]');
     expect(watchesButton).toHaveLinkContaining('/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0');
     expect(watchesButton).toBeClickable();
 });
