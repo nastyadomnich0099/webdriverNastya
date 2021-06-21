@@ -12,7 +12,9 @@ class LoginPage extends Page {
     get btnSubmit () { return $('button[type="submit"]') }
     get searchInput() {return $('#gh-ac') } 
     get searchBtn() {return $('#gh-btn') }
-    get shopButton(){return $('//span[text()="Watches"]')}
+    get watchesButton(){return $('//span[text()="Наручные часы"]')}
+    get languageBtn() {return $('#gh-eb-Geo-a-default')}
+    get languageBtn2() {return $('#gh-eb-Geo-a-en')}
 
     /**
      * a method to encapsule automation code to interact with the page
@@ -30,7 +32,7 @@ class LoginPage extends Page {
     }
 
     async clicklink(){
-        await (await this.shopButton).click();
+        await (await this.watchesButton).click();
 
     }
     /**
@@ -38,6 +40,15 @@ class LoginPage extends Page {
      */
     open () {
         return super.open('login');
+    }
+
+    async selectLanguage(){
+
+        await (await this.languageBtn).click();
+
+        await (await this.languageBtn).selectByVisibleText('English');
+        
+
     }
 
   
