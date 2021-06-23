@@ -1,47 +1,38 @@
-import LoginPage from  '../pageobjects/login.page';
-import SecurePage from '../pageobjects/secure.page';
+import WatchPage from  '../pageobjects/watch.page';
+import {waitForTextChange} from '../utilities/helper'
 
-
-// describe('My Login application', () => {
-//     it('should login with valid credentials', async () => {
-//         await LoginPage.open();
-
-//         await LoginPage.login('tomsmith', 'SuperSecretPassword!');
-//         await expect(SecurePage.flashAlert).toBeExisting();
-//         await expect(SecurePage.flashAlert).toHaveTextContaining(
-//             'You logged into a secure area!');
-//     });
-// });
 
 
 
 describe('Ebay Product Search', ()=>{
     it('should open the main url and verify the title',async () =>{
-      browser.url('https://www.ebay.com/');
-        //   await LoginPage.selectLanguage();
-        //   await expect(browser).toHaveValue('English');
-         expect(browser).toHaveTitle('Electronics, Cars, Fashion, Collectibles & More | eBay'
-          );
-        
-
+     await browser.url('https://www.ebay.com/');
+      await  expect(browser).toHaveTitle('Электроника, автомобили, мода, коллекционирование, купоны и другие товары | eBay');
     });
+
 
 
     it('should search for a product and verify the search text value',async () =>{
     
-     LoginPage.input('laptop');
-     expect(LoginPage.searchInput).toHaveValue('laptop');
+     await WatchPage.input('laptop');
+     await expect(WatchPage.searchInput).toHaveValue('laptop');
       
     });
 
-it('should redirect to a new page and verify the title', () =>{
-    expect(browser).toHaveTitle('laptop | eBay');
+it('should redirect to a new page and verify the title', async () =>{
+    await expect(browser).toHaveTitle('laptop | eBay');
 });
 
-it('should update the search category', ()=>{
+it('should update the search category', async ()=>{
     const category = $('#gh-cat option:nth-child(1)');
+    await (waitForTextChange(category, 'Ноутбуки и нетбуки PC', 3000 ));
+   await expect(category).toHaveText('Ноутбуки и нетбуки PC');
+});
 
-    expect(category).toHaveText('PC Laptops & Netbooks');
-})
+it('should update the search category', async ()=>{
+    const category = $('#gh-cat option:nth-child(1)');
+    await (waitForTextChange(category, 'Ноутбуки и нетбуки PC', 3000 ));
+   await expect(category).toHaveText('Ноутбуки и нетбуки PC');
+});
 
 });

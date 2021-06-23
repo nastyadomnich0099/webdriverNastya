@@ -3,7 +3,7 @@ import Page from './page';
 /**
  * sub page containing specific selectors and methods for a specific page
  */
-class LoginPage extends Page {
+class WatchPage extends Page {
     /**
      * define selectors using getter methods
      */
@@ -15,6 +15,8 @@ class LoginPage extends Page {
     get watchesButton(){return $('//span[text()="Наручные часы"]')}
     get languageBtn() {return $('#gh-eb-Geo-a-default')}
     get languageBtn2() {return $('#gh-eb-Geo-a-en')}
+    get fashionLink() {return $$('.hl-cat-nav__js-tab a[href *="Fashion"]')[0]};
+    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')};
 
     /**
      * a method to encapsule automation code to interact with the page
@@ -39,7 +41,7 @@ class LoginPage extends Page {
      * overwrite specifc options to adapt it to page object
      */
     open () {
-        return super.open('login');
+        return super.open('/watches');
     }
 
     async selectLanguage(){
@@ -51,8 +53,22 @@ class LoginPage extends Page {
 
     }
 
+    async moveTo(){
+        await (await this.watchesLink).click();
+    }
+
+    async waitForDisplayed(){
+        await (await this.watchesLink.waitForDisplayed())
+    }
+
+    async clickWatch(){
+        await (await this.watchesLink.click())
+    }
+
+
+
   
   
 }
 
-export default new LoginPage();
+export default new WatchPage();

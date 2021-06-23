@@ -1,10 +1,29 @@
-import LoginPage from  '../pageobjects/login.page';
-import SecurePage from '../pageobjects/secure.page';
+import WatchPage from  '../pageobjects/watch.page';
+import {waitAndClick} from '../utilities/helper'
+import {expect as chaiExpect} from 'chai';
 
 
 
 describe('Watches Page', ()=>{
-   
+      before(() =>{
+         WatchPage.open();
+         WatchPage.moveTo();
+         //browser.pause(1000);
+   waitAndClick(WatchPage.watchesLink, 5000);
+         
+      
+     });
+
+
+
+    //  after(() =>{
+    //      browser.url('https://www.ebay.com');
+    //  });
+
+    //  afterEach(() =>{
+    //      browser.refresh();
+
+    //  });
 
 it ('should show the banner container', () => {
 browser.url('https://www.ebay.com/sch/260324/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27');
@@ -24,7 +43,7 @@ it('should contain link on banner button and verify its clickable', async () => 
 });
 
 it('should click on watch section', async  () => {
-    await LoginPage.clicklink();
+    await WatchPage.clicklink();
     await expect(browser).toHaveUrl('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27');
 
 
