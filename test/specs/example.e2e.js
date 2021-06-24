@@ -1,6 +1,6 @@
 import WatchPage from  '../pageobjects/watch.page';
 import {waitAndClick} from '../utilities/helper'
-import {expect as chaiExpect} from 'chai';
+import { expect as chaiExpect} from 'chai';
 
 
 
@@ -44,9 +44,14 @@ it('should contain link on banner button and verify its clickable', async () => 
 
 it('should click on watch section', async  () => {
     await WatchPage.clicklink();
+
+    const url = browser.getUrl();
+    await chaiExpect(url).to.include('/260325/');
     await expect(browser).toHaveUrl('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27');
 
 
 });
+
+
 
 });

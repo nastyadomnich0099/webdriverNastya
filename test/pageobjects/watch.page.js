@@ -17,6 +17,7 @@ class WatchPage extends Page {
     get languageBtn2() {return $('#gh-eb-Geo-a-en')}
     get fashionLink() {return $$('.hl-cat-nav__js-tab a[href *="Fashion"]')[0]};
     get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')};
+ 
 
     /**
      * a method to encapsule automation code to interact with the page

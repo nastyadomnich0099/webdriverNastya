@@ -35,4 +35,5 @@ it('should update the search category', async ()=>{
    await expect(category).toHaveText('Ноутбуки и нетбуки PC');
 });
 
+
 });
