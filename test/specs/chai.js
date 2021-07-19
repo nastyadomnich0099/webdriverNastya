@@ -1,6 +1,9 @@
 import WatchPage from  '../pageobjects/watch.page';
 import {waitAndClick} from '../utilities/helper'
 import { expect as chaiExpect} from 'chai';
+import 'chai/register-should';
+const chai = require('chai');
+
 
 
 
@@ -33,21 +36,34 @@ expect(promoBanner).toBeDisplayed();
 
 it('should show the banner title', async () =>{
     const watchesButton = $('//span[text()="Наручные часы"]');
+ 
+    const watchesButtonText = watchesButton.getText();
+
+
     await expect (watchesButton).toHaveText('Наручные часы');
+    chaiExpect(watchesButtonText).to.not.be.empty;
 })
 
 it('should contain link on banner button and verify its clickable', async () => {
-    const watchesButton = $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]');
-    await expect(watchesButton).toHaveLinkContaining('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27');
-    await expect(watchesButton).toBeClickable();
+    const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]');
+
+
+
+    await expect(watchesButtonLink).toHaveLinkContaining('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27');
+    await expect(watchesButtonLink).toBeClickable();
+
+
 });
 
 it('should click on watch section', async  () => {
     await WatchPage.clicklink();
 
-    const url = browser.getUrl();
-    await chaiExpect(url).to.include('/260325/');
-    await expect(browser).toHaveUrl('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27');
+    
+
+    const url = $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]');
+  
+  chaiExpect(url).to.include('/260325/');
+   await expect(browser).toHaveUrl('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27');
 
 
 });
