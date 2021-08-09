@@ -12,13 +12,13 @@ class WatchPage extends Page {
     get btnSubmit () { return $('button[type="submit"]') }
     get searchInput() {return $('#gh-ac') } 
     get searchBtn() {return $('#gh-btn') }
-    get watchesButton(){return $('//span[text()="Наручные часы"]')}
+    get watchesButton(){return $('//span[text()="Watches"]')}
     get languageBtn() {return $('#gh-eb-Geo-a-default')}
     get languageBtn2() {return $('#gh-eb-Geo-a-en')}
     get fashionLink() {return $$('.hl-cat-nav__js-tab a[href *="Fashion"]')[0]};
-    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Наручные часы"]')};
+    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Watches"]')};
     get  url() {return $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]')};
-    get watchesCategoryList() {return $$('//ul[@class="srp-refine__category__list"]/li[@class="srp-refine__category__item"]/ul')[0]};
+    get watchesCategoryList() {return $$('//ul[@class="srp-refine__category__list"]/li[@class="srp-refine__category__item"]/ul/li//span')};
 
 
  
@@ -38,13 +38,13 @@ class WatchPage extends Page {
 
     async getWatchesCategotyList(){
         var watchesList =[];
-        this.watchesCategoryList.map((element)=>
-       watchesList.push(element.getText())
-        
-        );
-        return watchesList;
-      
+        await (await this.watchesCategoryList).forEach( element  => {
+            let text = element.getText();
+            console.log(text);
+            watchesList.push(text);
+        });
 
+        return watchesList;
     }
 
 
