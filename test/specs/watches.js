@@ -13,28 +13,45 @@ describe('Watches Page', () => {
 
     before(async () => {
         await browser.url('https://www.ebay.com/');
-        await WatchPage.open();
-        await WatchPage.input("watches");
+        await WatchPage.selectLanguage();
+
+       // await WatchPage.open();
+
+        await browser.pause(5000);
+
+
+
+        await WatchPage.fashionLink.moveTo();
+        await browser.pause(5000);
+        await WatchPage.watchesLink.click();
+        await browser.pause(5000);
+
+
+        
+
+
+
+        //await WatchPage.input("watches");
     });
 
 
 
-    //  after(() =>{
-    //      browser.url('https://www.ebay.com');
-    //  });
+     after(() =>{
+         browser.url('https://www.ebay.com/');
+     });
 
-    //  afterEach(() =>{
-    //      browser.refresh();
+     afterEach(() =>{
+         browser.refresh();
 
-    //  });
+     });
 
     it('should verify the watches categoty list', async () => {
         var watchesList = await WatchPage.getWatchesCategotyList();
-        chaiExpect(watchesList).to.include([
-            'Часы, запчасти и аксессуары',
-            'Запчасти, инструменты и инструкции',
-            'Наручные часы',
-            'Аксессуары для часов',
+        chaiExpect(watchesList).to.deep.equal([
+            'Watches',
+            'Watch Accessories',
+            'Parts, Tools & Guides',
+            'Watches Mixed Lots',
         ]);
     });
 

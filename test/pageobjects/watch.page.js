@@ -16,9 +16,11 @@ class WatchPage extends Page {
     get languageBtn() {return $('#gh-eb-Geo-a-default')}
     get languageBtn2() {return $('#gh-eb-Geo-a-en')}
     get fashionLink() {return $$('.hl-cat-nav__js-tab a[href *="Fashion"]')[0]};
-    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Watches"]')};
+    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')};
+
     get  url() {return $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]')};
     get watchesCategoryList() {return $$('//ul[@class="srp-refine__category__list"]/li[@class="srp-refine__category__item"]/ul/li//span')};
+  
 
 
  
@@ -38,11 +40,10 @@ class WatchPage extends Page {
 
     async getWatchesCategotyList(){
         var watchesList =[];
-        await (await this.watchesCategoryList).forEach( element  => {
-            let text = element.getText();
-            console.log(text);
-            watchesList.push(text);
-        });
+       for (const element of await this.watchesCategoryList) {
+           let text = await element.getText();
+           await  watchesList.push(text);
+       }
 
         return watchesList;
     }
@@ -78,8 +79,9 @@ class WatchPage extends Page {
     async selectLanguage(){
 
         await (await this.languageBtn).click();
+        await (await this.languageBtn2).click();
 
-        await (await this.languageBtn).selectByVisibleText('English');
+       // await (await this.languageBtn).selectByVisibleText("English");
         
 
     }
