@@ -1,38 +1,93 @@
-import WatchPage from  '../pageobjects/watch.page';
-import {waitForTextChange} from '../utilities/helper'
+import WatchPage from '../pageobjects/watch.page';
+import {
+    waitAndClick
+} from '../utilities/helper'
+import {
+    expect as chaiExpect
+} from 'chai';
+import 'chai/register-should';
 
 
 
+describe('Watches Page', () => {
 
-describe('Ebay Product Search', ()=>{
-    it('should open the main url and verify the title',async () =>{
-     await browser.url('https://www.ebay.com/');
-      await  expect(browser).toHaveTitle('Электроника, автомобили, мода, коллекционирование, купоны и другие товары | eBay');
-    });
+    before(async () => {
+        await browser.url('https://www.ebay.com/');
+        await WatchPage.selectLanguage();
 
-
-
-    it('should search for a product and verify the search text value',async () =>{
-    
-     await WatchPage.input('laptop');
-     await expect(WatchPage.searchInput).toHaveValue('laptop');
       
+
+        await browser.pause(5000);
+        await WatchPage.openWatchesPage();
+
+
+
+        // await WatchPage.fashionLink.moveTo();
+        // await browser.pause(5000);
+        // await WatchPage.watchesLink.click();
+        // await browser.pause(5000);
+
+
+        
+
+
+
+        //await WatchPage.input("watches");
     });
 
-it('should redirect to a new page and verify the title', async () =>{
-    await expect(browser).toHaveTitle('laptop | eBay');
-});
 
-it('should update the search category', async ()=>{
-    const category = $('#gh-cat option:nth-child(1)');
-    await (waitForTextChange(category, 'Ноутбуки и нетбуки PC', 3000 ));
-   await expect(category).toHaveText('Ноутбуки и нетбуки PC');
-});
 
-it('should update the search category', async ()=>{
-    const category = $('#gh-cat option:nth-child(1)');
-    await (waitForTextChange(category, 'Ноутбуки и нетбуки PC', 3000 ));
-   await expect(category).toHaveText('Ноутбуки и нетбуки PC');
-});
+     after(() =>{
+         browser.url('https://www.ebay.com/');
+     });
+
+     afterEach(() =>{
+         browser.refresh();
+
+     });
+
+    it('should verify the watches categoty list', async () => {
+        var watchesList = await WatchPage.getWatchesCategotyList();
+        chaiExpect(watchesList).to.deep.equal([
+            'Watches',
+            'Watch Accessories',
+            'Parts, Tools & Guides',
+            'Watches Mixed Lots',
+        ]);
+    });
+
+    // it('should show the banner container', () => {
+    //     const promoBanner = $('//span[@tabindex="0"]');
+    //     expect(promoBanner).toBeDisplayed();
+    // });
+
+    // it('should show the banner title', async () => {
+    //     const watchesButton = $('//span[text()="Watches"]');
+    //     await expect(watchesButton).toHaveText('Watches');
+
+    // })
+
+    // it('should contain link on banner button and verify its clickable', async () => {
+    //     const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=watches")]');
+    //     await expect(watchesButtonLink).toHaveLinkContaining('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=watches');
+    //     await expect(watchesButtonLink).toBeClickable();
+
+
+    // });
+
+    // it('should click on watch section', async () => {
+    //     await WatchPage.clicklink();
+
+
+
+    //     //const url = $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]');
+
+    //     // await expect(url).to.include('/260325/');
+    //     await expect(browser).toHaveUrl('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=watches');
+
+
+    // });
+
+
 
 });
