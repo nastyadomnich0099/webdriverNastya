@@ -15,16 +15,17 @@ describe('Watches Page', () => {
         await browser.url('https://www.ebay.com/');
         await WatchPage.selectLanguage();
 
-       // await WatchPage.open();
+      
 
         await browser.pause(5000);
+        await WatchPage.openWatchesPage();
 
 
 
-        await WatchPage.fashionLink.moveTo();
-        await browser.pause(5000);
-        await WatchPage.watchesLink.click();
-        await browser.pause(5000);
+        // await WatchPage.fashionLink.moveTo();
+        // await browser.pause(5000);
+        // await WatchPage.watchesLink.click();
+        // await browser.pause(5000);
 
 
         
