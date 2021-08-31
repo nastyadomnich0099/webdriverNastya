@@ -68,6 +68,11 @@ class WatchPage extends Page {
 
     }
 
+    // async getText(){
+    //     await (await this.watchesButton).getText();
+    //     await expect (await this.watchesButton).toHaveText('Watches');
+    // }
+
 
 
 

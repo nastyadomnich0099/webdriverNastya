@@ -9,7 +9,7 @@ import {
 describe('Ebay Product Search', () => {
     it('should open the main url and verify the title', async () => {
         await browser.url('https://www.ebay.com/');
-        await expect(browser).toHaveTitle('Электроника, автомобили, мода, коллекционирование, купоны и другие товары | eBay');
+        await expect(browser).toHaveTitle('Electronics, Cars, Fashion, Collectibles & More | eBay');
     });
 
 
@@ -27,17 +27,8 @@ describe('Ebay Product Search', () => {
 
     it('should update the search category', async () => {
         const category = $('#gh-cat option:nth-child(1)');
-        await (waitForTextChange(category, 'Ноутбуки и нетбуки PC', 3000));
-        await expect(category).toHaveText('Ноутбуки и нетбуки PC');
+        await (waitForTextChange(category, 'PC Laptops & Netbooks', 3000));
+        await expect(category).toHaveText('PC Laptops & Netbooks');
     });
-
-    it('should update the search category', async () => {
-        const category = $('#gh-cat option:nth-child(1)');
-        await (waitForTextChange(category, 'Ноутбуки и нетбуки PC', 3000));
-        await expect(category).toHaveText('Ноутбуки и нетбуки PC');
-    });
-
-
-
 
 });
