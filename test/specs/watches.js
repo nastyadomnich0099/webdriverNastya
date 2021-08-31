@@ -13,22 +13,17 @@ describe('Watches Page', () => {
 
     before(async () => {
         await browser.url('https://www.ebay.com/');
-        await WatchPage.selectLanguage();
+       // await WatchPage.selectLanguage();
 
       
 
         await browser.pause(5000);
+   //     await WatchPage.moveTo();
+   //     await WatchPage.clickWatch();
+
         await WatchPage.openWatchesPage();
 
-
-
-        // await WatchPage.fashionLink.moveTo();
-        // await browser.pause(5000);
-        // await WatchPage.watchesLink.click();
-        // await browser.pause(5000);
-
-
-        
+        await  browser.pause(5000);
 
 
 

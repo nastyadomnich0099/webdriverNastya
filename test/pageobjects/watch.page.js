@@ -16,7 +16,7 @@ class WatchPage extends Page {
     get languageBtn() {return $('#gh-eb-Geo-a-default')}
     get languageBtn2() {return $('#gh-eb-Geo-a-en')}
     get fashionLink() {return $('.hl-cat-nav__js-tab a[href *="Fashion"]')};
-    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')};
+    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches/31387/"]')};
 
     get  url() {return $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]')};
     get watchesCategoryList() {return $$('//ul[@class="srp-refine__category__list"]/li[@class="srp-refine__category__item"]/ul/li//span')};
@@ -42,7 +42,7 @@ class WatchPage extends Page {
         var watchesList =[];
        for (const element of await this.watchesCategoryList) {
            let text = await element.getText();
-           await  watchesList.push(text);
+           await watchesList.push(text);
        }
 
         return watchesList;
@@ -83,7 +83,7 @@ class WatchPage extends Page {
     }
 
     async moveTo(){
-        await (await this.watchesLink).click();
+        await (await this.fashionLink).moveTo();
     }
 
     async waitForDisplayed(){
@@ -91,13 +91,14 @@ class WatchPage extends Page {
     }
 
     async clickWatch(){
-        await (await this.watchesLink.click())
+        await (await this.watchesLink).click();
     }
 
     async openWatchesPage(){
-        await (await this.fashionLink.moveTo());
+        await (await this.fashionLink).moveTo();
         await  browser.pause(5000);
-        await (await this.watchesLink.clcik());
+        await (await this.watchesLink).click();
+
     }
 
 
