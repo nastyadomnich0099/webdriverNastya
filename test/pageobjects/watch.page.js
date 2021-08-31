@@ -12,14 +12,14 @@ class WatchPage extends Page {
     get btnSubmit () { return $('button[type="submit"]') }
     get searchInput() {return $('#gh-ac') } 
     get searchBtn() {return $('#gh-btn') }
-    get watchesButton(){return $('//span[text()="Watches"]')}
+    get watchesButton(){return $('//a[@class="b-textlink b-textlink--sibling"][text()="Watches"]')}
     get languageBtn() {return $('#gh-eb-Geo-a-default')}
     get languageBtn2() {return $('#gh-eb-Geo-a-en')}
     get fashionLink() {return $('.hl-cat-nav__js-tab a[href *="Fashion"]')};
-    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches/31387/"]')};
+    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Watches-Parts-Accessories"]')};
 
     get  url() {return $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]')};
-    get watchesCategoryList() {return $$('//ul[@class="srp-refine__category__list"]/li[@class="srp-refine__category__item"]/ul/li//span')};
+    get watchesCategoryList() {return $$('//ul/li/a[@class="b-textlink b-textlink--sibling"]')};
   
 
 
@@ -62,6 +62,12 @@ class WatchPage extends Page {
         await (await this.watchesButton).click();
 
     }
+
+    async toHaveText(){
+        await expect (await this.watchesButton).toHaveText('Watches');
+
+    }
+
 
 
 

@@ -15,12 +15,7 @@ describe('Watches Page', () => {
         await browser.url('https://www.ebay.com/');
        // await WatchPage.selectLanguage();
 
-      
-
         await browser.pause(5000);
-   //     await WatchPage.moveTo();
-   //     await WatchPage.clickWatch();
-
         await WatchPage.openWatchesPage();
 
         await  browser.pause(5000);
@@ -45,43 +40,36 @@ describe('Watches Page', () => {
         var watchesList = await WatchPage.getWatchesCategotyList();
         chaiExpect(watchesList).to.deep.equal([
             'Watches',
-            'Watch Accessories',
             'Parts, Tools & Guides',
+            'Watch Accessories',
             'Watches Mixed Lots',
         ]);
     });
 
-    // it('should show the banner container', () => {
-    //     const promoBanner = $('//span[@tabindex="0"]');
-    //     expect(promoBanner).toBeDisplayed();
-    // });
+    it('should show the banner container', () => {
+        const promoBanner = $('//span[@tabindex="0"]');
+        expect(promoBanner).toBeDisplayed();
+    });
 
-    // it('should show the banner title', async () => {
-    //     const watchesButton = $('//span[text()="Watches"]');
-    //     await expect(watchesButton).toHaveText('Watches');
+    it('should show the banner title', async () => {
+        await WatchPage.toHaveText();
 
-    // })
+    });
 
-    // it('should contain link on banner button and verify its clickable', async () => {
-    //     const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=watches")]');
-    //     await expect(watchesButtonLink).toHaveLinkContaining('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=watches');
-    //     await expect(watchesButtonLink).toBeClickable();
-
-
-    // });
-
-    // it('should click on watch section', async () => {
-    //     await WatchPage.clicklink();
+    it('should contain link on banner button and verify its clickable', async () => {
+        const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--sibling"]');
+        await expect(watchesButtonLink).toHaveLinkContaining('https://www.ebay.com/b/Watches/260325/bn_7117208191');
+        await expect(watchesButtonLink).toBeClickable();
 
 
+    });
 
-    //     //const url = $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]');
+    it('should click on watch section', async () => {
+        await WatchPage.clicklink(); 
+        await expect(browser).toHaveUrl('https://www.ebay.com/b/Watches/260325/bn_7117208191');
 
-    //     // await expect(url).to.include('/260325/');
-    //     await expect(browser).toHaveUrl('https://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=watches');
 
-
-    // });
+    });
 
 
 
