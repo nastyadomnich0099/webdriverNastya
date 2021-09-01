@@ -38,15 +38,19 @@ describe('Watches Page', () => {
         expect(promoBanner).toBeDisplayed();
     });
 
-    it('should show the banner title', async () => {
-       // const watchesButton = $('//a[@class="b-textlink b-textlink--sibling"][text()="Watches"]');
+ 
+  
 
-        const watchesButtonText = WatchPage.getText();
+    // it('should show the banner title', async () => {
+    //     const watchesButton = $('//a[@class="b-textlink b-textlink--sibling"][text()="Watches"]');
+
+    //     const watchesButtonText = WatchPage.getText();
 
 
-       // await expect(watchesButton).toHaveText('Watches');
-        chaiExpect(watchesButtonText).to.not.be.empty;
-    })
+    //     await expect(watchesButton).toHaveText('Watches');
+    //     chaiExpect(watchesButtonText).to.not.be.empty;
+    // })
+
 
     it('should contain link on banner button and verify its clickable', async () => {
         const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--sibling"]');
@@ -59,18 +63,18 @@ describe('Watches Page', () => {
 
     });
 
-    it('should click on watch section', async () => {
-        await WatchPage.clicklink();
+    // it('should click on watch section', async () => {
+    //     await WatchPage.clicklink();
 
 
 
-       const url = $('//a[contains(@href, "https://www.ebay.com/b/Watches/260325/bn_7117208191")]');
+    //    const url = $('//a[contains(@href, "https://www.ebay.com/b/Watches/260325/bn_7117208191")]');
 
-        chaiExpect(url).to.include('/260325/');
-        await expect(browser).toHaveUrl('https://www.ebay.com/b/Watches/260325/bn_7117208191');
+    //     chaiExpect(url).to.include('/260325/');
+    //     await expect(browser).toHaveUrl('https://www.ebay.com/b/Watches/260325/bn_7117208191');
 
 
-    });
+    // });
 
 
 

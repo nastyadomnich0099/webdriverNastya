@@ -10,8 +10,7 @@ class WatchPage extends Page {
     get inputUsername () { return $('#username') }
     get inputPassword () { return $('#password') }
     get btnSubmit () { return $('button[type="submit"]') }
-    get searchInput() {return $('#gh-ac') } 
-    get searchBtn() {return $('#gh-btn') }
+ 
     get watchesButton(){return $('//a[@class="b-textlink b-textlink--sibling"][text()="Watches"]')}
     get languageBtn() {return $('#gh-eb-Geo-a-default')}
     get languageBtn2() {return $('#gh-eb-Geo-a-en')}
@@ -38,6 +37,11 @@ class WatchPage extends Page {
 
     // }
 
+    async getText(){
+
+        await (await this.watchesButton).getText();
+    }
+
     async getWatchesCategotyList(){
         var watchesList =[];
        for (const element of await this.watchesCategoryList) {
@@ -53,10 +57,6 @@ class WatchPage extends Page {
         await (await this.btnSubmit).click();
     }
 
-    async input(value){
-        await(await this.searchInput).setValue(value);
-        await(await this.searchBtn).click();
-    }
 
     async clicklink(){
         await (await this.watchesButton).click();
@@ -107,7 +107,8 @@ class WatchPage extends Page {
 
     async openWatchesPage(){
         await (await this.fashionLink).moveTo();
-        await  browser.pause(5000);
+       // await  browser.pause(5000);
+        await (await this.watchesLink).waitForDisplayed({timeout: 1000});
         await (await this.watchesLink).click();
 
     }
