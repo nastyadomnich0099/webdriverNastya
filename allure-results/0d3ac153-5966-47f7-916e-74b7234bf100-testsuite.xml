@@ -1,0 +1,107 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1632163693904' stop='1632163701555'>
+    <name>Ebay Product Search</name>
+    <title>Ebay Product Search</title>
+    <test-cases>
+        <test-case start='1632163693905' status='broken' stop='1632163701552'>
+            <name>"before all" hook for Ebay Product Search</name>
+            <title>"before all" hook for Ebay Product Search</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-93.0.4577.82'/>
+            </parameters>
+            <steps>
+                <step start='1632163693906' status='passed' stop='1632163695984'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='189f9644-cdef-442c-953d-9e4982c2c4ac-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1632163695984' status='passed' stop='1632163697471'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='b272d6cd-75bc-48a5-87db-e02a142e581a-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1632163697473' status='passed' stop='1632163697522'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='b4199588-9081-4609-b97c-2d5ee411d3d8-attachment.json' type='application/json' size='64'/>
+                        <attachment title='Response' source='098a0705-48e4-4d79-9f06-9f7a6536eb5b-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1632163697529' status='passed' stop='1632163701404'>
+                    <name>POST /session/:sessionId/element/f777fb7c-8ef8-4143-a109-61b8edfb2a1c/click</name>
+                    <title>POST /session/:sessionId/element/f777fb7c-8ef8-4143-a109-61b8edfb2a1c/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1632163701405' status='passed' stop='1632163701422'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='7b6bae1d-2828-4092-82cd-603e7f4e88d0-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='44432412-a813-4ed0-91fe-82440372c980-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1632163701425' status='broken' stop='1632163701552'>
+                    <name>POST /session/:sessionId/element/d91e461f-358b-445f-893a-ff5b1ac64c30/click</name>
+                    <title>POST /session/:sessionId/element/d91e461f-358b-445f-893a-ff5b1ac64c30/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>element not interactable
+                  (Session info: chrome=93.0.4577.82)</message>
+                <stack-trace>element not interactable: element not interactable
+                  (Session info: chrome=93.0.4577.82)
+                    at Object.getErrorFromResponseBody (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/utils.js:189:12)
+                    at WebDriverRequest._request (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/request.js:168:31)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)
+                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)
+                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1632163701552' status='passed' stop='1632163701554'>
+            <name>should update the search category</name>
+            <title>should update the search category</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-93.0.4577.82'/>
+            </parameters>
+            <steps>
+                <step start='1632163701552' status='undefined'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='38e37ce3-c3bb-40dc-81ec-05282585b5a6-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

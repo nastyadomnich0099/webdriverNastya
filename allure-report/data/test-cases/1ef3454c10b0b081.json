@@ -1,0 +1,247 @@
+{
+  "uid" : "1ef3454c10b0b081",
+  "name" : "should update the search category",
+  "fullName" : "Ebay Product Search.should update the search category",
+  "historyId" : "c29b6cecdb486f6731680b1f5dce1683",
+  "time" : {
+    "start" : 1632310648408,
+    "stop" : 1632310650400,
+    "duration" : 1992
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1632310648409,
+        "stop" : 1632310650313,
+        "duration" : 1904
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "POST /session/:sessionId/element",
+        "time" : {
+          "start" : 1632310648412,
+          "stop" : 1632310648435,
+          "duration" : 23
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "6d66f22b1a4b2e5d",
+          "name" : "Request",
+          "source" : "6d66f22b1a4b2e5d.json",
+          "type" : "application/json",
+          "size" : 71
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ {
+        "uid" : "72717b2dd0ca81d1",
+        "name" : "Request",
+        "source" : "72717b2dd0ca81d1.json",
+        "type" : "application/json",
+        "size" : 71
+      }, {
+        "uid" : "36f3b63c273bec8b",
+        "name" : "Response",
+        "source" : "36f3b63c273bec8b.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/element/83016ff8-647a-4b94-a874-57bd4601ffd5/text",
+      "time" : {
+        "start" : 1632310650369,
+        "stop" : 1632310650393,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "fdc1b8c545042ee3",
+        "name" : "Response",
+        "source" : "fdc1b8c545042ee3.json",
+        "type" : "application/json",
+        "size" : 23
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/refresh",
+      "time" : {
+        "start" : 1632310650395,
+        "stop" : 0,
+        "duration" : -1632310650395
+      },
+      "status" : "unknown",
+      "steps" : [ {
+        "name" : "POST /session/:sessionId/url",
+        "time" : {
+          "start" : 1632310650398,
+          "stop" : 0,
+          "duration" : -1632310650398
+        },
+        "status" : "unknown",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "bf5d1f63ac013af3",
+          "name" : "Request",
+          "source" : "bf5d1f63ac013af3.json",
+          "type" : "application/json",
+          "size" : 36
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "882d9b4e957cccc4",
+      "name" : "Response",
+      "source" : "882d9b4e957cccc4.json",
+      "type" : "application/json",
+      "size" : 83
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 6,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "search category"
+  }, {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Ebay Product Search"
+  }, {
+    "name" : "testClass",
+    "value" : "Ebay Product Search"
+  }, {
+    "name" : "testMethod",
+    "value" : "should update the search category"
+  }, {
+    "name" : "package",
+    "value" : "Ebay Product Search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-93.0.4577.82"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "e32b332d243ec8f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632166444801,
+        "stop" : 1632166447729,
+        "duration" : 2928
+      }
+    }, {
+      "uid" : "2b79bc432db025ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632165986545,
+        "stop" : 1632165989920,
+        "duration" : 3375
+      }
+    }, {
+      "uid" : "c2d7aa4ab8718fcd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632165195134,
+        "stop" : 1632165197460,
+        "duration" : 2326
+      }
+    }, {
+      "uid" : "5fddaa0391f98166",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632164932459,
+        "stop" : 1632164934688,
+        "duration" : 2229
+      }
+    }, {
+      "uid" : "6748a5f23491350d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632163701552,
+        "stop" : 1632163701554,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "280c3ace10bf6aa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632163578303,
+        "stop" : 1632163578305,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "c948eda7125d9bae",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632163308522,
+        "stop" : 1632163308524,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "af6ebbf4400c51da",
+      "status" : "failed",
+      "statusDetails" : "Expect $(`#gh-cat option:nth-child(1)`) to have text\n                \n                Expected: \"PC Laptops & Netbooks\"\n                Received: \"Ноутбуки и нетбуки PC\"",
+      "time" : {
+        "start" : 1632163181504,
+        "stop" : 1632163193600,
+        "duration" : 12096
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1ef3454c10b0b081.json",
+  "parameterValues" : [ "chrome-93.0.4577.82" ]
+}

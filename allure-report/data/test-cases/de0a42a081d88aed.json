@@ -1,0 +1,182 @@
+{
+  "uid" : "de0a42a081d88aed",
+  "name" : "\"before all\" hook for Watches Page",
+  "fullName" : "Watches Page.\"before all\" hook for Watches Page",
+  "historyId" : "e649cd37080736a5e61df502b0bc34c4",
+  "time" : {
+    "start" : 1632164144292,
+    "stop" : 1632164154861,
+    "duration" : 10569
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "element not interactable\n                  (Session info: chrome=93.0.4577.82)",
+  "statusTrace" : "element not interactable: element not interactable\n                  (Session info: chrome=93.0.4577.82)\n                    at Object.getErrorFromResponseBody (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/utils.js:189:12)\n                    at WebDriverRequest._request (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/request.js:168:31)\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "element not interactable\n                  (Session info: chrome=93.0.4577.82)",
+    "statusTrace" : "element not interactable: element not interactable\n                  (Session info: chrome=93.0.4577.82)\n                    at Object.getErrorFromResponseBody (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/utils.js:189:12)\n                    at WebDriverRequest._request (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/request.js:168:31)\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/url",
+      "time" : {
+        "start" : 1632164144294,
+        "stop" : 1632164146229,
+        "duration" : 1935
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "a956fdf2ed5f18d3",
+        "name" : "Request",
+        "source" : "a956fdf2ed5f18d3.json",
+        "type" : "application/json",
+        "size" : 37
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1632164146231,
+        "stop" : 1632164146254,
+        "duration" : 23
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "8e47c807e8c2e27b",
+        "name" : "Request",
+        "source" : "8e47c807e8c2e27b.json",
+        "type" : "application/json",
+        "size" : 64
+      }, {
+        "uid" : "7f97fb6385d35605",
+        "name" : "Response",
+        "source" : "7f97fb6385d35605.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/element/5fdf15ea-1bd8-4624-bba9-5d103d3e5081/click",
+      "time" : {
+        "start" : 1632164146263,
+        "stop" : 1632164154788,
+        "duration" : 8525
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1632164154789,
+        "stop" : 1632164154803,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6707e9b872bdfce5",
+        "name" : "Request",
+        "source" : "6707e9b872bdfce5.json",
+        "type" : "application/json",
+        "size" : 59
+      }, {
+        "uid" : "f7276fbf0ed7dea0",
+        "name" : "Response",
+        "source" : "f7276fbf0ed7dea0.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/element/475afa77-d2c6-4318-99f8-2d25192b7150/click",
+      "time" : {
+        "start" : 1632164154806,
+        "stop" : 1632164154861,
+        "duration" : 55
+      },
+      "status" : "broken",
+      "statusMessage" : "element not interactable: element not interactable\n                  (Session info: chrome=93.0.4577.82)\n                    at Object.getErrorFromResponseBody (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/utils.js:189:12)\n                    at WebDriverRequest._request (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/request.js:168:31)\n                    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)\n                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)\n                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 5,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Watches Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Watches Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "\"before all\" hook for Watches Page"
+  }, {
+    "name" : "package",
+    "value" : "Watches Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-93.0.4577.82"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "de0a42a081d88aed.json",
+  "parameterValues" : [ "chrome-93.0.4577.82" ]
+}

@@ -1,0 +1,99 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1632164144292' stop='1632164154864'>
+    <name>Watches Page</name>
+    <title>Watches Page</title>
+    <test-cases>
+        <test-case start='1632164144292' status='broken' stop='1632164154861'>
+            <name>"before all" hook for Watches Page</name>
+            <title>"before all" hook for Watches Page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-93.0.4577.82'/>
+            </parameters>
+            <steps>
+                <step start='1632164144294' status='passed' stop='1632164146229'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='3c701188-a168-400d-84c9-0b628867455e-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1632164146231' status='passed' stop='1632164146254'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='4d738338-f4b5-4355-b599-5fe06a82fa7d-attachment.json' type='application/json' size='64'/>
+                        <attachment title='Response' source='833f4cac-fa29-4051-99a1-534a38f7118a-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1632164146263' status='passed' stop='1632164154788'>
+                    <name>POST /session/:sessionId/element/5fdf15ea-1bd8-4624-bba9-5d103d3e5081/click</name>
+                    <title>POST /session/:sessionId/element/5fdf15ea-1bd8-4624-bba9-5d103d3e5081/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1632164154789' status='passed' stop='1632164154803'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='ee62ce5d-546a-4b90-8701-397f59146c4d-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='dcd4d264-53d1-4039-b988-068377302bdc-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1632164154806' status='broken' stop='1632164154861'>
+                    <name>POST /session/:sessionId/element/475afa77-d2c6-4318-99f8-2d25192b7150/click</name>
+                    <title>POST /session/:sessionId/element/475afa77-d2c6-4318-99f8-2d25192b7150/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>element not interactable
+                  (Session info: chrome=93.0.4577.82)</message>
+                <stack-trace>element not interactable: element not interactable
+                  (Session info: chrome=93.0.4577.82)
+                    at Object.getErrorFromResponseBody (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/utils.js:189:12)
+                    at WebDriverRequest._request (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriver/build/request.js:168:31)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)
+                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)
+                    at Element.elementErrorHandlerCallbackFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/webdriverio/build/middlewares.js:23:32)
+                    at Element.wrapCommandFn (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:78:29)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1632164154862' status='passed' stop='1632164154864'>
+            <name>should click on watch section</name>
+            <title>should click on watch section</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-93.0.4577.82'/>
+            </parameters>
+            <steps>
+                <step start='1632164154862' status='undefined'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='d47489b5-2b29-4a20-81e6-22772857b39d-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

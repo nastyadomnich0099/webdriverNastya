@@ -6,14 +6,17 @@ import {
     expect as chaiExpect
 } from 'chai';
 import 'chai/register-should';
+import resources from '../resources';
+
 
 
 
 describe('Watches Page', () => {
 
     before(async () => {
-        await browser.url('https://www.ebay.com/');
-       // await WatchPage.selectLanguage();
+      //  await browser.url('https://www.ebay.com/');
+      await WatchPage.open();
+        await WatchPage.selectLanguage();
         await browser.pause(1000);
         await WatchPage.openWatchesPage();
 
@@ -33,16 +36,11 @@ describe('Watches Page', () => {
 
     it('should verify the watches categoty list', async () => {
         var watchesList = await WatchPage.getWatchesCategotyList();
-        chaiExpect(watchesList).to.deep.equal([
-            'Watches',
-            'Parts, Tools & Guides',
-            'Watch Accessories',
-            'Watches Mixed Lots',
-        ]);
+        chaiExpect(watchesList).to.deep.equal(resources.wathesCategoryList);
     });
 
     it('should show the banner container', () => {
-        const promoBanner = $('//span[@tabindex="0"]');
+        const promoBanner = $('//div[@class="title-banner__right-image"]');
         expect(promoBanner).toBeDisplayed();
     });
 
@@ -50,13 +48,12 @@ describe('Watches Page', () => {
         await WatchPage.toHaveText();
 
     });
+    
 
     it('should contain link on banner button and verify its clickable', async () => {
-        const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--sibling"]');
+        const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--parent"]');
         await expect(watchesButtonLink).toHaveLinkContaining('https://www.ebay.com/b/Watches/260325/bn_7117208191');
         await expect(watchesButtonLink).toBeClickable();
-
-
     });
 
     it('should click on watch section', async () => {

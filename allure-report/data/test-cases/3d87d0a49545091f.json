@@ -1,0 +1,237 @@
+{
+  "uid" : "3d87d0a49545091f",
+  "name" : "should contain link on banner button and verify its clickable",
+  "fullName" : "Watches Page.should contain link on banner button and verify its clickable",
+  "historyId" : "52f47d16f56d494f5662d6e8e8515d5a",
+  "time" : {
+    "start" : 1632164692907,
+    "stop" : 1632164703998,
+    "duration" : 11091
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1632164692908,
+        "stop" : 1632164692912,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5bcb3a8b9ab8e068",
+        "name" : "Request",
+        "source" : "5bcb3a8b9ab8e068.json",
+        "type" : "application/json",
+        "size" : 151
+      }, {
+        "uid" : "48e62796ac229b59",
+        "name" : "Response",
+        "source" : "48e62796ac229b59.json",
+        "type" : "application/json",
+        "size" : 83
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/execute/sync",
+      "time" : {
+        "start" : 1632164692922,
+        "stop" : 1632164692972,
+        "duration" : 50
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7310fdcd3200c919",
+        "name" : "Request",
+        "source" : "7310fdcd3200c919.json",
+        "type" : "application/json",
+        "size" : 8337
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/element/15a2a917-0aa5-4733-9905-ee99d87f5330/attribute/href",
+      "time" : {
+        "start" : 1632164700161,
+        "stop" : 1632164703949,
+        "duration" : 3788
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "d6a5ccca880569c8",
+        "name" : "Response",
+        "source" : "d6a5ccca880569c8.json",
+        "type" : "application/json",
+        "size" : 53
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/execute/sync",
+      "time" : {
+        "start" : 1632164703951,
+        "stop" : 1632164703977,
+        "duration" : 26
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "92ed4da25f4cd95a",
+        "name" : "Request",
+        "source" : "92ed4da25f4cd95a.json",
+        "type" : "application/json",
+        "size" : 8337
+      }, {
+        "uid" : "f659627ebad4075",
+        "name" : "Response",
+        "source" : "f659627ebad4075.json",
+        "type" : "application/json",
+        "size" : 4
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/execute/sync",
+      "time" : {
+        "start" : 1632164703977,
+        "stop" : 1632164703996,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "ec8893a67cc94491",
+        "name" : "Request",
+        "source" : "ec8893a67cc94491.json",
+        "type" : "application/json",
+        "size" : 5649
+      }, {
+        "uid" : "3f81c38926d98333",
+        "name" : "Response",
+        "source" : "3f81c38926d98333.json",
+        "type" : "application/json",
+        "size" : 4
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/refresh",
+      "time" : {
+        "start" : 1632164703997,
+        "stop" : 0,
+        "duration" : -1632164703997
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "b14159c6d79cba24",
+      "name" : "Response",
+      "source" : "b14159c6d79cba24.json",
+      "type" : "application/json",
+      "size" : 83
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 9,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "Watches Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Watches Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should contain link on banner button and verify its clickable"
+  }, {
+    "name" : "package",
+    "value" : "Watches Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-93.0.4577.82"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "46c579a35fd37396",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632164448978,
+        "stop" : 1632164455276,
+        "duration" : 6298
+      }
+    }, {
+      "uid" : "1ade649325f391b5",
+      "status" : "failed",
+      "statusDetails" : "Expect $(`//a[contains(@href, \"://www.ebay.com/b/Watches/260325/bn_7117208191\")][@class=\"b-textlink b-textlink--parent\"]`) to have attribute href containing\n                \n                Expected: \"https://www.ebay.com/b/Watches/260325/bn_7117208191\"\n                Received: undefined",
+      "time" : {
+        "start" : 1632163859185,
+        "stop" : 1632163870402,
+        "duration" : 11217
+      }
+    }, {
+      "uid" : "3f2afa68ae7c3b26",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632161993797,
+        "stop" : 1632162000019,
+        "duration" : 6222
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3d87d0a49545091f.json",
+  "parameterValues" : [ "chrome-93.0.4577.82" ]
+}

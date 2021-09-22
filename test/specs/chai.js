@@ -12,14 +12,35 @@ const chai = require('chai');
 
 
 describe('Watches Page', () => {
-    before(() => {
-        WatchPage.open();
-        WatchPage.moveTo();
-        //browser.pause(1000);
-        waitAndClick(WatchPage.watchesLink, 5000);
 
+    before(async () => {
+     //  await browser.url('https://www.ebay.com/');
+      await WatchPage.open() 
+       await WatchPage.selectLanguage();
+        await browser.pause(1000);
+        await WatchPage.openWatchesPage();
 
+        //await WatchPage.input("watches");
     });
+
+
+
+     after(() =>{
+         browser.url('https://www.ebay.com/');
+     });
+
+     afterEach(() =>{
+         browser.refresh();
+
+     });
+    // before(() => {
+    //     WatchPage.open();
+    //     WatchPage.moveTo();
+    //     //browser.pause(1000);
+    //     waitAndClick(WatchPage.watchesLink, 5000);
+
+
+    // });
 
 
 
@@ -53,7 +74,7 @@ describe('Watches Page', () => {
 
 
     it('should contain link on banner button and verify its clickable', async () => {
-        const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--sibling"]');
+        const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--parent"]');
 
 
 
@@ -71,7 +92,7 @@ describe('Watches Page', () => {
     //    const url = $('//a[contains(@href, "https://www.ebay.com/b/Watches/260325/bn_7117208191")]');
 
     //     chaiExpect(url).to.include('/260325/');
-    //     await expect(browser).toHaveUrl('https://www.ebay.com/b/Watches/260325/bn_7117208191');
+    //     chaiExpect(browser).toHaveUrl('https://www.ebay.com/b/Watches/260325/bn_7117208191');
 
 
     // });

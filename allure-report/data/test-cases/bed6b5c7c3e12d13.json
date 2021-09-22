@@ -1,0 +1,198 @@
+{
+  "uid" : "bed6b5c7c3e12d13",
+  "name" : "should show the banner title",
+  "fullName" : "Watches Page.should show the banner title",
+  "historyId" : "bbf9d6fe14a8edf538b5f02b147122d8",
+  "time" : {
+    "start" : 1632163862250,
+    "stop" : 1632163890495,
+    "duration" : 28245
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1632163862251,
+        "stop" : 1632163862455,
+        "duration" : 204
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "dc2297a29f04c6f6",
+        "name" : "Request",
+        "source" : "dc2297a29f04c6f6.json",
+        "type" : "application/json",
+        "size" : 102
+      }, {
+        "uid" : "ac73b94f97233ff6",
+        "name" : "Response",
+        "source" : "ac73b94f97233ff6.json",
+        "type" : "application/json",
+        "size" : 368
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "GET /session/:sessionId/element/5f33233c-5b69-9949-9e9f-7a5818282fce/displayed",
+      "time" : {
+        "start" : 1632163875576,
+        "stop" : 1632163890462,
+        "duration" : 14886
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "GET /session/:sessionId/element/ea94d3af-dacb-4e40-9ee6-5bcfe7882e7e/text",
+      "time" : {
+        "start" : 1632163890473,
+        "stop" : 0,
+        "duration" : -1632163890473
+      },
+      "status" : "unknown",
+      "steps" : [ {
+        "name" : "POST /session/:sessionId/element",
+        "time" : {
+          "start" : 1632163890476,
+          "stop" : 1632163890490,
+          "duration" : 14
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "7f0f302014a5eb3e",
+          "name" : "Request",
+          "source" : "7f0f302014a5eb3e.json",
+          "type" : "application/json",
+          "size" : 80
+        }, {
+          "uid" : "f011dc97d5a9060d",
+          "name" : "Response",
+          "source" : "f011dc97d5a9060d.json",
+          "type" : "application/json",
+          "size" : 9
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "POST /session/:sessionId/refresh",
+        "time" : {
+          "start" : 1632163890493,
+          "stop" : 1632163890496,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "4685e4002130e9b7",
+          "name" : "Response",
+          "source" : "4685e4002130e9b7.json",
+          "type" : "application/json",
+          "size" : 83
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "GET /session/:sessionId/element/5f33233c-5b69-9949-9e9f-7a5818282fce/displayed",
+        "time" : {
+          "start" : 1632163890499,
+          "stop" : 0,
+          "duration" : -1632163890499
+        },
+        "status" : "unknown",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "18b294ec1720f2d2",
+      "name" : "Response",
+      "source" : "18b294ec1720f2d2.json",
+      "type" : "application/json",
+      "size" : 83
+    }, {
+      "uid" : "c25c0dc1651ae7d1",
+      "name" : "Response",
+      "source" : "c25c0dc1651ae7d1.json",
+      "type" : "application/json",
+      "size" : 83
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "1-0"
+  }, {
+    "name" : "suite",
+    "value" : "Watches Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Watches Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should show the banner title"
+  }, {
+    "name" : "package",
+    "value" : "Watches Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "firefox-92.0"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bed6b5c7c3e12d13.json",
+  "parameterValues" : [ "firefox-92.0" ]
+}
