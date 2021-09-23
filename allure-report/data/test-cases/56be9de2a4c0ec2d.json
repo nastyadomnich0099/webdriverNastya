@@ -1,0 +1,156 @@
+{
+  "uid" : "56be9de2a4c0ec2d",
+  "name" : "should redirect to a new page and verify the title",
+  "fullName" : "Ebay Product Search.should redirect to a new page and verify the title",
+  "historyId" : "6fd7562df129416707edade2c1f02bb4",
+  "time" : {
+    "start" : 1632163327832,
+    "stop" : 1632163353793,
+    "duration" : 25961
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1632163327833,
+        "stop" : 1632163353790,
+        "duration" : 25957
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "GET /session/:sessionId/title",
+        "time" : {
+          "start" : 1632163327838,
+          "stop" : 1632163353783,
+          "duration" : 25945
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "POST /session/:sessionId/elements",
+          "time" : {
+            "start" : 1632163328320,
+            "stop" : 1632163353775,
+            "duration" : 25455
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "79738ecf6cb19890",
+            "name" : "Request",
+            "source" : "79738ecf6cb19890.json",
+            "type" : "application/json",
+            "size" : 94
+          } ],
+          "parameters" : [ ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 1,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "1999ab81e453cf1c",
+          "name" : "Response",
+          "source" : "1999ab81e453cf1c.json",
+          "type" : "application/json",
+          "size" : 368
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 2,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ {
+        "uid" : "358a716d2757f3cf",
+        "name" : "Request",
+        "source" : "358a716d2757f3cf.json",
+        "type" : "application/json",
+        "size" : 94
+      }, {
+        "uid" : "b3d7d2cfbe1fdc62",
+        "name" : "Response",
+        "source" : "b3d7d2cfbe1fdc62.json",
+        "type" : "application/json",
+        "size" : 15
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 4,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/refresh",
+      "time" : {
+        "start" : 1632163353792,
+        "stop" : 0,
+        "duration" : -1632163353792
+      },
+      "status" : "unknown",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "387a163b8deff79f",
+      "name" : "Response",
+      "source" : "387a163b8deff79f.json",
+      "type" : "application/json",
+      "size" : 2
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 5,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "1-0"
+  }, {
+    "name" : "suite",
+    "value" : "Ebay Product Search"
+  }, {
+    "name" : "testClass",
+    "value" : "Ebay Product Search"
+  }, {
+    "name" : "testMethod",
+    "value" : "should redirect to a new page and verify the title"
+  }, {
+    "name" : "package",
+    "value" : "Ebay Product Search"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "firefox-92.0"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "56be9de2a4c0ec2d.json",
+  "parameterValues" : [ "firefox-92.0" ]
+}

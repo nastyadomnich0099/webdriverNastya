@@ -1,4 +1,10 @@
 exports.config = {
+    //Browserstack Config
+    user: process.env.BROWSERSTACK_USERNAME,
+    key: process.env.BROWSERSTACK_KEY,
+
+
+
     //
     // ====================
     // Runner Configuration
@@ -24,7 +30,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/watches.js'
+        './test/specs/search.js' 
     ],
     // Patterns to exclude.
     exclude: [
@@ -52,7 +58,8 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
+    capabilities: [
+        {
     
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
@@ -65,7 +72,12 @@ exports.config = {
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+    },
+    {
+        maxInstances: 5,
+        browserName: 'firefox', 
+    },
+],
     //
     // ===================
     // Test Configurations
@@ -113,8 +125,10 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
-    
+    services: ['browserstack'],
+
+ // services: ['selenium-standalone'],
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -135,10 +149,21 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        ['allure', 
+        {
+        outputDir: 'allure-results',
+        },
+    ],
 
+     [ 'junit',
+  {
+    outputDir: './report',
+  },
 
-    
+  ],
+   ],
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -225,8 +250,15 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: function(
+        test, 
+        context, 
+        { error, result, duration, passed, retries }
+        ) {
+            if (error){
+        browser.takeScreenshot();
+            }
+    },
 
 
     /**

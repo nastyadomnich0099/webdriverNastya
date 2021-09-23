@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "element not interactable\n                  (Session info: chrome=93.0.4577.82)",
+      "children" : [ {
+        "name" : "\"before all\" hook for Ebay Product Search",
+        "uid" : "ad7d7e21a812aa88",
+        "parentUid" : "e1b07cf46b2140f5820aac2f91147b48",
+        "status" : "broken",
+        "time" : {
+          "start" : 1632163693905,
+          "stop" : 1632163701552,
+          "duration" : 7647
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome-93.0.4577.82" ]
+      }, {
+        "name" : "\"before all\" hook for Watches Page",
+        "uid" : "de0a42a081d88aed",
+        "parentUid" : "e1b07cf46b2140f5820aac2f91147b48",
+        "status" : "broken",
+        "time" : {
+          "start" : 1632164144292,
+          "stop" : 1632164154861,
+          "duration" : 10569
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome-93.0.4577.82" ]
+      } ],
+      "uid" : "e1b07cf46b2140f5820aac2f91147b48"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

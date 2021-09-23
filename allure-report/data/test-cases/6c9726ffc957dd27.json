@@ -1,0 +1,149 @@
+{
+  "uid" : "6c9726ffc957dd27",
+  "name" : "should click on watch section",
+  "fullName" : "Watches Page.should click on watch section",
+  "historyId" : "2f4006cf25a0916c2c2ab67376b82ba6",
+  "time" : {
+    "start" : 1632164496032,
+    "stop" : 1632164556052,
+    "duration" : 60020
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "broken",
+  "statusMessage" : "Timeout of 60000ms exceeded. The execution in the test \"Watches Page should click on watch section\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (/Users/anastasia/Desktop/webdriverNastya/test/specs/watches.js)",
+  "statusTrace" : "Error: Timeout of 60000ms exceeded. The execution in the test \"Watches Page should click on watch section\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (/Users/anastasia/Desktop/webdriverNastya/test/specs/watches.js)\n                    at createTimeoutError (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/errors.js:498:15)\n                    at Test.Runnable._timeoutError (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/runnable.js:431:10)\n                    at Timeout.<anonymous> (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/runnable.js:246:24)\n                    at listOnTimeout (internal/timers.js:554:17)\n                    at processTimers (internal/timers.js:497:7)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "Timeout of 60000ms exceeded. The execution in the test \"Watches Page should click on watch section\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (/Users/anastasia/Desktop/webdriverNastya/test/specs/watches.js)",
+    "statusTrace" : "Error: Timeout of 60000ms exceeded. The execution in the test \"Watches Page should click on watch section\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (/Users/anastasia/Desktop/webdriverNastya/test/specs/watches.js)\n                    at createTimeoutError (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/errors.js:498:15)\n                    at Test.Runnable._timeoutError (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/runnable.js:431:10)\n                    at Timeout.<anonymous> (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/runnable.js:246:24)\n                    at listOnTimeout (internal/timers.js:554:17)\n                    at processTimers (internal/timers.js:497:7)",
+    "steps" : [ {
+      "name" : "POST /session/:sessionId/element",
+      "time" : {
+        "start" : 1632164496032,
+        "stop" : 1632164508205,
+        "duration" : 12173
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "7b255b52b76d3fa7",
+        "name" : "Request",
+        "source" : "7b255b52b76d3fa7.json",
+        "type" : "application/json",
+        "size" : 102
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/element/8c846147-0464-5649-b55c-730e465b8232/click",
+      "time" : {
+        "start" : 1632164508212,
+        "stop" : 1632164556041,
+        "duration" : 47829
+      },
+      "status" : "broken",
+      "statusMessage" : "Error: Timeout of 60000ms exceeded. The execution in the test \"Watches Page should click on watch section\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (/Users/anastasia/Desktop/webdriverNastya/test/specs/watches.js)\n                    at createTimeoutError (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/errors.js:498:15)\n                    at Test.Runnable._timeoutError (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/runnable.js:431:10)\n                    at Timeout.<anonymous> (/Users/anastasia/Desktop/webdriverNastya/node_modules/mocha/lib/runnable.js:246:24)\n                    at listOnTimeout (internal/timers.js:554:17)\n                    at processTimers (internal/timers.js:497:7)",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "POST /session/:sessionId/refresh",
+      "time" : {
+        "start" : 1632164556043,
+        "stop" : 0,
+        "duration" : -1632164556043
+      },
+      "status" : "unknown",
+      "steps" : [ {
+        "name" : "POST /session/:sessionId/url",
+        "time" : {
+          "start" : 1632164556049,
+          "stop" : 0,
+          "duration" : -1632164556049
+        },
+        "status" : "unknown",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "49ea0900b9360db9",
+          "name" : "Request",
+          "source" : "49ea0900b9360db9.json",
+          "type" : "application/json",
+          "size" : 36
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "d5f6e8d4d2a15d17",
+      "name" : "Response",
+      "source" : "d5f6e8d4d2a15d17.json",
+      "type" : "application/json",
+      "size" : 83
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "1-0"
+  }, {
+    "name" : "suite",
+    "value" : "Watches Page"
+  }, {
+    "name" : "testClass",
+    "value" : "Watches Page"
+  }, {
+    "name" : "testMethod",
+    "value" : "should click on watch section"
+  }, {
+    "name" : "package",
+    "value" : "Watches Page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "firefox-92.0"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6c9726ffc957dd27.json",
+  "parameterValues" : [ "firefox-92.0" ]
+}

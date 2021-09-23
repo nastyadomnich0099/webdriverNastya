@@ -1,4 +1,5 @@
 import Page from './page';
+import {waitAndClick} from '../utilities/helper'
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -10,16 +11,15 @@ class WatchPage extends Page {
     get inputUsername () { return $('#username') }
     get inputPassword () { return $('#password') }
     get btnSubmit () { return $('button[type="submit"]') }
-    get searchInput() {return $('#gh-ac') } 
-    get searchBtn() {return $('#gh-btn') }
-    get watchesButton(){return $('//span[text()="Watches"]')}
+ 
+    get watchesButton(){return $('//a[@class="b-textlink b-textlink--parent"][text()="Watches"]')}
     get languageBtn() {return $('#gh-eb-Geo-a-default')}
     get languageBtn2() {return $('#gh-eb-Geo-a-en')}
     get fashionLink() {return $('.hl-cat-nav__js-tab a[href *="Fashion"]')};
     get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')};
 
     get  url() {return $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]')};
-    get watchesCategoryList() {return $$('//ul[@class="srp-refine__category__list"]/li[@class="srp-refine__category__item"]/ul/li//span')};
+    get watchesCategoryList() {return $$('//ul/li/a[@class="b-textlink b-textlink--sibling"]')};
   
 
 
@@ -38,11 +38,16 @@ class WatchPage extends Page {
 
     // }
 
+    async getText(){
+
+        await (await this.watchesButton).getText();
+    }
+
     async getWatchesCategotyList(){
         var watchesList =[];
        for (const element of await this.watchesCategoryList) {
            let text = await element.getText();
-           await  watchesList.push(text);
+           await watchesList.push(text);
        }
 
         return watchesList;
@@ -53,15 +58,22 @@ class WatchPage extends Page {
         await (await this.btnSubmit).click();
     }
 
-    async input(value){
-        await(await this.searchInput).setValue(value);
-        await(await this.searchBtn).click();
-    }
 
     async clicklink(){
         await (await this.watchesButton).click();
 
     }
+
+    async toHaveText(){
+        await expect (await this.watchesButton).toHaveText('Watches');
+
+    }
+
+    // async getText(){
+    //     await (await this.watchesButton).getText();
+    //     await expect (await this.watchesButton).toHaveText('Watches');
+    // }
+
 
 
 
@@ -69,7 +81,7 @@ class WatchPage extends Page {
      * overwrite specifc options to adapt it to page object
      */
     open () {
-        return super.open('/watches');
+        return super.open('/');
     }
 
     async selectLanguage(){
@@ -83,7 +95,7 @@ class WatchPage extends Page {
     }
 
     async moveTo(){
-        await (await this.watchesLink).click();
+        await (await this.fashionLink).moveTo();
     }
 
     async waitForDisplayed(){
@@ -91,13 +103,16 @@ class WatchPage extends Page {
     }
 
     async clickWatch(){
-        await (await this.watchesLink.click())
+        await (await this.watchesLink).click();
     }
 
     async openWatchesPage(){
-        await (await this.fashionLink.moveTo());
+        await (await this.fashionLink).moveTo();
         await  browser.pause(5000);
-        await (await this.watchesLink.clcik());
+
+       waitAndClick(await this.watchesLink , 5000);
+         
+
     }
 
 

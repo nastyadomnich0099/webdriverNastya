@@ -1,43 +1,71 @@
 import WatchPage from '../pageobjects/watch.page';
-import {
-    waitForTextChange
-} from '../utilities/helper'
+import SearchPage from '../pageobjects/search.page';
+import {waitForTextChange} from '../utilities/helper';
+import resources from '../resources';
+import allureReporter from '@wdio/allure-reporter'
 
 
 
 
 describe('Ebay Product Search', () => {
-    it('should open the main url and verify the title', async () => {
+
+    before(async () => {
         await browser.url('https://www.ebay.com/');
-        await expect(browser).toHaveTitle('Электроника, автомобили, мода, коллекционирование, купоны и другие товары | eBay');
+        await WatchPage.open();
+     //  await WatchPage.selectLanguage();
+        await browser.pause(1000);
+        await WatchPage.openWatchesPage();
+
+        //await WatchPage.input("watches");
+    });
+
+
+
+     after(() =>{
+         browser.url('https://www.ebay.com/');
+     });
+
+     afterEach(() =>{
+         browser.refresh();
+
+     });
+
+
+
+    it('should open the main url and verify the title', async () => {
+        await browser.url('https://www.ebay.com');
+        await expect(browser).toHaveTitle(resources.homeTitle);
     });
 
 
 
     it('should search for a product and verify the search text value', async () => {
+        allureReporter.addSeverity('Critical');
 
-        await WatchPage.input('laptop');
-        await expect(WatchPage.searchInput).toHaveValue('laptop');
+        await SearchPage.input('laptop');
+        await expect(SearchPage .searchInput).toHaveValue('laptop');
 
     });
 
     it('should redirect to a new page and verify the title', async () => {
-        await expect(browser).toHaveTitle('laptop | eBay');
+        await expect(browser).toHaveTitle(resources.laptopTitle);
     });
 
     it('should update the search category', async () => {
-        const category = $('#gh-cat option:nth-child(1)');
-        await (waitForTextChange(category, 'Ноутбуки и нетбуки PC', 3000));
-        await expect(category).toHaveText('Ноутбуки и нетбуки PC');
+       //var category = $('#gh-cat option:nth-child(1)'); // If we commented we will get 'category is not defined '
+      allureReporter.addFeature('search category');
+
+
+       waitForTextChange(SearchPage.category, 'PC Laptops & Netbooks', 3000);
+        // browser.waitUntil(
+        //     function(){
+        //         return (SearchPage.category).getText() === 'PC Laptops & Netbooks'
+        //     },
+        //     {timeout: 3000}
+        // );
+       // await (waitForTextChange(category, 'PC Laptops & Netbooks', 3000));
+        await expect(SearchPage.category).toHaveText('PC Laptops & Netbooks');
+        
     });
-
-    it('should update the search category', async () => {
-        const category = $('#gh-cat option:nth-child(1)');
-        await (waitForTextChange(category, 'Ноутбуки и нетбуки PC', 3000));
-        await expect(category).toHaveText('Ноутбуки и нетбуки PC');
-    });
-
-
-
 
 });

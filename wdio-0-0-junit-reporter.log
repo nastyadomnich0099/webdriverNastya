@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Ebay Product Search" timestamp="2021-09-22T16:51:07" time="18.791" tests="4" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Ebay Product Search"/>
+      <property name="capabilities" value="chrome.93_0_4577_82.macosx"/>
+      <property name="file" value="./test/specs/search.js"/>
+    </properties>
+    <testcase classname="chrome.93_0_4577_82.macosx.Ebay_Product_Search" name="should open the main url and verify the title" time="1.07">
+      <system-out><![CDATA[
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"740f8724-08ae-4b63-be0e-097ec93366d3","ELEMENT":"740f8724-08ae-4b63-be0e-097ec93366d3"}]}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element/740f8724-08ae-4b63-be0e-097ec93366d3/click - {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/url - {"url":"https://www.ebay.com/"}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"740f8724-08ae-4b63-be0e-097ec93366d3","ELEMENT":"740f8724-08ae-4b63-be0e-097ec93366d3"}]}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"740f8724-08ae-4b63-be0e-097ec93366d3","ELEMENT":"740f8724-08ae-4b63-be0e-097ec93366d3"}]}
+RESULT: {"url":"https://www.ebay.com/"}
+COMMAND: GET /session/285e91ea8ec0f8e32fc8a40d89f3f37a/title - {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/refresh - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.93_0_4577_82.macosx.Ebay_Product_Search" name="should search for a product and verify the search text value" time="3.997">
+      <system-out><![CDATA[
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":"#gh-ac"}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element/740f8724-08ae-4b63-be0e-097ec93366d3/click - {}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"ee17964f-bc4b-4905-bc76-1c9274b24828","ELEMENT":"ee17964f-bc4b-4905-bc76-1c9274b24828"}]}
+RESULT: {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {"using":"css selector","value":"#gh-ac"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element/dba08f84-901f-491f-89ba-017443af674b/clear - {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"ee17964f-bc4b-4905-bc76-1c9274b24828","ELEMENT":"ee17964f-bc4b-4905-bc76-1c9274b24828"}]}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element/f40c4e35-8d29-466e-a63e-d06ed1c4db64/click - {}
+RESULT: {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element/dba08f84-901f-491f-89ba-017443af674b/value - {"text":"laptop"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {"text":"laptop"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":"#gh-btn"}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f40c4e35-8d29-466e-a63e-d06ed1c4db64","ELEMENT":"f40c4e35-8d29-466e-a63e-d06ed1c4db64"}]}
+RESULT: {"using":"css selector","value":"#gh-btn"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element/d01fe2ee-f5b7-4c54-829d-4099de8fe072/click - {}
+RESULT: {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f40c4e35-8d29-466e-a63e-d06ed1c4db64","ELEMENT":"f40c4e35-8d29-466e-a63e-d06ed1c4db64"}]}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/execute/sync - {"script":"return (function isElementDisplayed(element) {\n    function nodeIsElement(node) {\n        if (!node) {\n            return false;\n        }\n        switch (node.nodeType) {\n            case Node.ELEMEN ... (7762 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f40c4e35-8d29-466e-a63e-d06ed1c4db64","ELEMENT":"f40c4e35-8d29-466e-a63e-d06ed1c4db64"}]}
+RESULT: {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":"#gh-ac"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {"using":"css selector","value":"#gh-ac"}
+COMMAND: GET /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element/3bc0bfb9-e720-4aef-b7c2-afa7521f23b2/property/value - {}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/elements - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/refresh - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.93_0_4577_82.macosx.Ebay_Product_Search" name="should redirect to a new page and verify the title" time="1.823">
+      <system-out><![CDATA[
+COMMAND: GET /session/285e91ea8ec0f8e32fc8a40d89f3f37a/title - {}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/elements - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/refresh - {}
+]]></system-out>
+    </testcase>
+    <testcase classname="chrome.93_0_4577_82.macosx.Ebay_Product_Search" name="should update the search category" time="2.25">
+      <system-out><![CDATA[
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/elements - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {}
+RESULT: {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+RESULT: {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: GET /session/285e91ea8ec0f8e32fc8a40d89f3f37a/element/d0366487-ab92-45df-8317-18c8d9c90204/text - {}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/elements - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/refresh - {}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/url - {"url":"https://www.ebay.com/"}
+COMMAND: DELETE /session/285e91ea8ec0f8e32fc8a40d89f3f37a - {}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/285e91ea8ec0f8e32fc8a40d89f3f37a/elements - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {}
+RESULT: {"url":"https://www.ebay.com/"}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

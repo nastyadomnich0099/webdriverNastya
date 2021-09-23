@@ -1,9 +1,9 @@
 export const waitForTextChange = (el, text, timeout) =>{
     browser.waitUntil(
         function(){
-            return category.getText() === text;
+            return el.getText() === text;
         },
-        {timeout}
+        {timeout: timeout}
     );
 };
 
@@ -12,5 +12,5 @@ export const waitAndClick = (el, timeout)=>{
         function(){
     el.waitForDisplayed({timeout});
     el.click();
-        });
+         } );
 };
