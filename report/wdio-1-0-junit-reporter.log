@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Ebay Product Search" timestamp="2021-09-22T17:18:18" time="30.667" tests="4" failures="0" errors="0" skipped="0">
+  <testsuite name="Ebay Product Search" timestamp="2021-09-23T14:00:46" time="34.921" tests="4" failures="0" errors="0" skipped="0">
     <properties>
       <property name="specId" value="0"/>
       <property name="suiteName" value="Ebay Product Search"/>
       <property name="capabilities" value="firefox.92_0.windows"/>
       <property name="file" value="./test/specs/search.js"/>
     </properties>
-    <testcase classname="firefox.92_0.windows.Ebay_Product_Search" name="should open the main url and verify the title" time="7.404">
+    <testcase classname="firefox.92_0.windows.Ebay_Product_Search" name="should open the main url and verify the title" time="8.12">
       <system-out><![CDATA[
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/370e53e7-a8eb-43ed-877d-3100630ea16c/click - {}
-COMMAND: GET /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/370e53e7-a8eb-43ed-877d-3100630ea16c/displayed - {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/url - {"url":"https://www.ebay.com/"}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/019c9bdb-b410-462b-b9e3-a05c48cb7456/click - {}
+COMMAND: GET /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/019c9bdb-b410-462b-b9e3-a05c48cb7456/displayed - {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/url - {"url":"https://www.ebay.com/"}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
 RESULT: {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: GET /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/019c9bdb-b410-462b-b9e3-a05c48cb7456/displayed - {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: GET /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/5f409f06-1539-4951-894c-87e0c4b4331f/displayed - {}
 RESULT: {"url":"https://www.ebay.com/"}
-COMMAND: GET /session/e144b48f89094b5ec0a520a71358324e1591ee9f/title - {}
-RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
-COMMAND: GET /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/370e53e7-a8eb-43ed-877d-3100630ea16c/displayed - {}
+COMMAND: GET /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/title - {}
 RESULT: {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/refresh - {}
+RESULT: {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/refresh - {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.92_0.windows.Ebay_Product_Search" name="should search for a product and verify the search text value" time="6.001">
+    <testcase classname="firefox.92_0.windows.Ebay_Product_Search" name="should search for a product and verify the search text value" time="7.727">
       <system-out><![CDATA[
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element - {"using":"css selector","value":"#gh-ac"}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element - {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element - {"using":"css selector","value":"#gh-ac"}
 RESULT: {}
-RESULT: {"using":"css selector","value":".hl-cat-nav__sub-cat-col a[href*=\"Wristwatches\"]"}
-COMMAND: GET /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/fae39cb7-0685-4fde-ab18-dc96ebc3d051/displayed - {}
 RESULT: {"using":"css selector","value":"#gh-ac"}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/28f5b5b6-55df-4686-854c-49d725653a20/clear - {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/8886baec-9b9c-44b3-8333-af213dc7089d/clear - {}
 RESULT: {}
-RESULT: {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/28f5b5b6-55df-4686-854c-49d725653a20/value - {"text":"laptop"}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/8886baec-9b9c-44b3-8333-af213dc7089d/value - {"text":"laptop"}
 RESULT: {"text":"laptop"}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element - {"using":"css selector","value":"#gh-btn"}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element - {"using":"css selector","value":"#gh-btn"}
 RESULT: {"using":"css selector","value":"#gh-btn"}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/edfe22d8-f698-45bd-aff1-fdd540a07d00/click - {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/69a518a3-ddb1-4c6f-9925-a2a5e78c9c29/click - {}
 RESULT: {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element - {"using":"css selector","value":"#gh-ac"}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element - {"using":"css selector","value":"#gh-ac"}
 RESULT: {"using":"css selector","value":"#gh-ac"}
-COMMAND: GET /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/ba63b4f6-fbeb-47ba-a852-81ebcdaab9cd/property/value - {}
+COMMAND: GET /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/1952dc10-2af4-4e74-84f5-93b52add1f6a/property/value - {}
 RESULT: {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/refresh - {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/refresh - {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.92_0.windows.Ebay_Product_Search" name="should redirect to a new page and verify the title" time="3.026">
+    <testcase classname="firefox.92_0.windows.Ebay_Product_Search" name="should redirect to a new page and verify the title" time="0.156">
       <system-out><![CDATA[
-COMMAND: GET /session/e144b48f89094b5ec0a520a71358324e1591ee9f/title - {}
+COMMAND: GET /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/title - {}
 RESULT: {}
-RESULT: {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/refresh - {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/refresh - {}
 ]]></system-out>
     </testcase>
-    <testcase classname="firefox.92_0.windows.Ebay_Product_Search" name="should update the search category" time="3.646">
+    <testcase classname="firefox.92_0.windows.Ebay_Product_Search" name="should update the search category" time="7.431">
       <system-out><![CDATA[
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element - {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+RESULT: {}
 RESULT: {}
 RESULT: {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
-COMMAND: GET /session/e144b48f89094b5ec0a520a71358324e1591ee9f/element/32c716f2-959e-4858-8b04-0f3f5f0de028/text - {}
 RESULT: {"using":"css selector","value":"#gh-cat option:nth-child(1)"}
+COMMAND: GET /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/element/c60891a2-a4c7-4f57-9704-cd86b07b33d4/text - {}
 RESULT: {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/refresh - {}
-COMMAND: POST /session/e144b48f89094b5ec0a520a71358324e1591ee9f/url - {"url":"https://www.ebay.com/"}
-COMMAND: DELETE /session/e144b48f89094b5ec0a520a71358324e1591ee9f - {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/refresh - {}
+COMMAND: POST /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf/url - {"url":"https://www.ebay.com/"}
+COMMAND: DELETE /session/393518c8b25e19d5f9402b5914a5f041e76c6ccf - {}
 RESULT: {}
 ]]></system-out>
     </testcase>
