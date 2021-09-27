@@ -11,12 +11,11 @@ describe('Ebay Product Search', () => {
 
     before(async () => {
         await browser.url('https://www.ebay.com/');
+        // [COMMENT] здесь получается, что метод WatchesPage.Open() открывает не WatchesPage(). Это нарушает логику пейдж-обджектов. такие методы можно вынести в условный MainPage объект
         await WatchPage.open();
-     //  await WatchPage.selectLanguage();
         await browser.pause(1000);
         await WatchPage.openWatchesPage();
 
-        //await WatchPage.input("watches");
     });
 
 
@@ -33,6 +32,7 @@ describe('Ebay Product Search', () => {
 
 
     it('should open the main url and verify the title', async () => {
+        // [COMMENT] тут мы делаем лишнее действие. ebay уже открылся благодаря before()
         await browser.url('https://www.ebay.com');
         await expect(browser).toHaveTitle(resources.homeTitle);
     });
@@ -43,6 +43,7 @@ describe('Ebay Product Search', () => {
         allureReporter.addSeverity('Critical');
 
         await SearchPage.input('laptop');
+        // [COMMENT] зачем пробел после SearchPage?)
         await expect(SearchPage .searchInput).toHaveValue('laptop');
 
     });
@@ -51,19 +52,12 @@ describe('Ebay Product Search', () => {
         await expect(browser).toHaveTitle(resources.laptopTitle);
     });
 
+    // [COMMENT] отступы
     it('should update the search category', async () => {
-       //var category = $('#gh-cat option:nth-child(1)'); // If we commented we will get 'category is not defined '
       allureReporter.addFeature('search category');
 
 
        waitForTextChange(SearchPage.category, 'PC Laptops & Netbooks', 3000);
-        // browser.waitUntil(
-        //     function(){
-        //         return (SearchPage.category).getText() === 'PC Laptops & Netbooks'
-        //     },
-        //     {timeout: 3000}
-        // );
-       // await (waitForTextChange(category, 'PC Laptops & Netbooks', 3000));
         await expect(SearchPage.category).toHaveText('PC Laptops & Netbooks');
         
     });

@@ -7,6 +7,7 @@ export const waitForTextChange = (el, text, timeout) =>{
     );
 };
 
+// [COMMENT] отступы
 export const waitAndClick = (el, timeout)=>{
     browser.waitUntil(
         function(){
