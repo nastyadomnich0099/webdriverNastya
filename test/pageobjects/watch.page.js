@@ -18,31 +18,16 @@ class WatchPage extends Page {
     get fashionLink() {return $('.hl-cat-nav__js-tab a[href *="Fashion"]')};
     get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')};
 
+    // [COMMENT] не ищем элементы по ссылкам
     get  url() {return $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]')};
     get watchesCategoryList() {return $$('//ul/li/a[@class="b-textlink b-textlink--sibling"]')};
-  
-
-
- 
-
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
-
-    // async getWatchesCategotyList(){
-    //     console.log(await (await this.watchesCategoryList).getText()); 
-
-       
-
-
-    // }
 
     async getText(){
 
         await (await this.watchesButton).getText();
     }
 
+    // [COMMENT] отступы и форматирование! + между методами нужна пустая строка
     async getWatchesCategotyList(){
         var watchesList =[];
        for (const element of await this.watchesCategoryList) {
@@ -64,40 +49,33 @@ class WatchPage extends Page {
 
     }
 
+    // [COMMENT] название метода не информативно
     async toHaveText(){
         await expect (await this.watchesButton).toHaveText('Watches');
 
     }
 
-    // async getText(){
-    //     await (await this.watchesButton).getText();
-    //     await expect (await this.watchesButton).toHaveText('Watches');
-    // }
-
-
-
-
     /**
      * overwrite specifc options to adapt it to page object
      */
+    // [COMMENT] явно стоит переместить в MainPage
     open () {
         return super.open('/');
     }
 
+    // [COMMENT] явно стоит переместить в MainPage. не имеет отношения к Watches
     async selectLanguage(){
 
         await (await this.languageBtn).click();
         await (await this.languageBtn2).click();
-
-       // await (await this.languageBtn).selectByVisibleText("English");
-        
-
     }
 
+    // [COMMENT] moveTo к чему? не информативное название
     async moveTo(){
         await (await this.fashionLink).moveTo();
     }
 
+    // [COMMENT] waitFor что Displayed?
     async waitForDisplayed(){
         await (await this.watchesLink.waitForDisplayed())
     }
