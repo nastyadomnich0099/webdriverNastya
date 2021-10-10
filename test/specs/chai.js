@@ -1,4 +1,5 @@
 import WatchPage from '../pageobjects/watch.page';
+import MainPage from '../pageobjects/main.page';
 import {
     waitAndClick
 } from '../utilities/helper'
@@ -13,11 +14,10 @@ const chai = require('chai');
 
 describe('Watches Page', () => {
 
-    // [COMMENT] не пишем лесенкой :) команды одного уровня одна под одной.
     before(async () => {
     
-        await WatchPage.open() 
-        await WatchPage.selectLanguage();
+        await MainPage.open() 
+        await MainPage.selectLanguage();
         await browser.pause(1000);
         await WatchPage.openWatchesPage();
     });
@@ -40,12 +40,8 @@ describe('Watches Page', () => {
     });
 
     it('should contain link on banner button and verify its clickable', async () => {
-        // [COMMENT] никогда не ищем элементы по @href. ссылки очень непостоянны, селектор легко сломать
-        const watchesButtonLink = $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--parent"]');
-
-
-        // [COMMENT] та же история) стараемся избегать поиска через .toHaveLinkContaining()
-        await expect(watchesButtonLink).toHaveLinkContaining('https://www.ebay.com/b/Watches/260325/bn_7117208191');
+        const watchesButtonLink = $('//a[@class="b-textlink b-textlink--parent"]');
+        await expect(watchesButtonLink).toBeDisplayed();
         await expect(watchesButtonLink).toBeClickable();
 
 

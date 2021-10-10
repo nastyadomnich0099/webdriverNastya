@@ -1,5 +1,7 @@
 import Page from './page';
-import {waitAndClick} from '../utilities/helper'
+import {
+    waitAndClick
+} from '../utilities/helper'
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -8,95 +10,106 @@ class WatchPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
-    get btnSubmit () { return $('button[type="submit"]') }
- 
-    get watchesButton(){return $('//a[@class="b-textlink b-textlink--parent"][text()="Watches"]')}
-    get languageBtn() {return $('#gh-eb-Geo-a-default')}
-    get languageBtn2() {return $('#gh-eb-Geo-a-en')}
-    get fashionLink() {return $('.hl-cat-nav__js-tab a[href *="Fashion"]')};
-    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')};
+    get inputUsername() {
+        return $('#username')
+    }
+    get inputPassword() {
+        return $('#password')
+    }
+    get btnSubmit() {
+        return $('button[type="submit"]')
+    }
 
-    // [COMMENT] не ищем элементы по ссылкам
-    get  url() {return $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]')};
-    get watchesCategoryList() {return $$('//ul/li/a[@class="b-textlink b-textlink--sibling"]')};
+    get watchesButton() {
+        return $('//a[@class="b-textlink b-textlink--parent"][text()="Watches"]')
+    }
 
-    async getText(){
+    get fashionLink() {
+        return $('.hl-cat-nav__js-tab a[href *="Fashion"]')
+    };
+    get watchesLink() {
+        return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')
+    };
+
+    get watchesCategoryList() {
+        return $$('//ul/li/a[@class="b-textlink b-textlink--sibling"]')
+    };
+
+    get promoBanner() {
+        return $('//div[@class="title-banner__right-image"]')
+    };
+
+    get watchesButtonLink() {
+        return $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--parent"]')
+    };
+
+    get watchBanner() {
+        return $('//span [@class ="b-pageheader__text"]')
+    };
+
+    async getText() {
 
         await (await this.watchesButton).getText();
     }
 
-    // [COMMENT] отступы и форматирование! + между методами нужна пустая строка
-    async getWatchesCategotyList(){
-        var watchesList =[];
-       for (const element of await this.watchesCategoryList) {
-           let text = await element.getText();
-           await watchesList.push(text);
-       }
+
+    async getWatchesCategotyList() {
+        var watchesList = [];
+        for (const element of await this.watchesCategoryList) {
+            let text = await element.getText();
+            await watchesList.push(text);
+        }
 
         return watchesList;
     }
-    async login (username, password) {
+    async login(username, password) {
         await (await this.inputUsername).setValue(username);
         await (await this.inputPassword).setValue(password);
         await (await this.btnSubmit).click();
     }
 
 
-    async clicklink(){
+    async clicklink() {
         await (await this.watchesButton).click();
 
     }
 
-    // [COMMENT] название метода не информативно
-    async toHaveText(){
-        await expect (await this.watchesButton).toHaveText('Watches');
+    async haveWatchBanner() {
+        await (await this.watchBanner).waitForDisplayed()
+    }
+
+
+    async toHaveWatchText() {
+        await expect(await this.watchesButton).toHaveText('Watches');
 
     }
 
     /**
      * overwrite specifc options to adapt it to page object
      */
-    // [COMMENT] явно стоит переместить в MainPage
-    open () {
-        return super.open('/');
-    }
-
-    // [COMMENT] явно стоит переместить в MainPage. не имеет отношения к Watches
-    async selectLanguage(){
-
-        await (await this.languageBtn).click();
-        await (await this.languageBtn2).click();
-    }
-
-    // [COMMENT] moveTo к чему? не информативное название
-    async moveTo(){
-        await (await this.fashionLink).moveTo();
-    }
-
-    // [COMMENT] waitFor что Displayed?
-    async waitForDisplayed(){
-        await (await this.watchesLink.waitForDisplayed())
-    }
-
-    async clickWatch(){
+    async clickWatch() {
         await (await this.watchesLink).click();
     }
 
-    async openWatchesPage(){
+    async openWatchesPage() {
         await (await this.fashionLink).moveTo();
-        await  browser.pause(5000);
+        await browser.pause(5000);
 
-       waitAndClick(await this.watchesLink , 5000);
-         
-
+        waitAndClick(await this.watchesLink, 5000);
     }
 
+    async toBeDisplayed() {
+        await (await this.promoBanner).toBeDisplayed()
+    }
 
+    async verifyWatchesCategLinkDisplayed(linkText) {
+        await expect (await this.watchesButtonLink).toHaveLinkContaining(linkText)
+    }
 
-  
-  
+    async verifyWatchesCategLinkClickable() {
+        await expect (await this.watchesButtonLink).toBeClickable()
+    }
+
 }
 
 export default new WatchPage();
