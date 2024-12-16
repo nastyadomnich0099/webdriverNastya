@@ -1,0 +1,101 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1633371816625' stop='1633371821558'>
+    <name>Watches Page</name>
+    <title>Watches Page</title>
+    <test-cases>
+        <test-case start='1633371816625' status='broken' stop='1633371821555'>
+            <name>"before all" hook for Watches Page</name>
+            <title>"before all" hook for Watches Page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-94.0.4606.61'/>
+            </parameters>
+            <steps>
+                <step start='1633371816628' status='passed' stop='1633371818461'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='1cd46801-f1f5-473d-8c32-206371948fc6-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1633371819464' status='passed' stop='1633371819483'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='6d37dd51-1d5f-43a4-9156-2db88ecef6ad-attachment.json' type='application/json' size='64'/>
+                        <attachment title='Response' source='aced7cb8-bc77-4310-bc58-4d7e3063e4ad-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1633371819489' status='passed' stop='1633371820308'>
+                    <name>POST /session/:sessionId/element/0545a20e-719c-4a04-a7d3-b78b0f44ba50/click</name>
+                    <title>POST /session/:sessionId/element/0545a20e-719c-4a04-a7d3-b78b0f44ba50/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1633371820308' status='passed' stop='1633371820347'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='4d781d86-7b39-4a17-af3b-2e0bb0adf016-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='deb31aa0-6bba-40e5-90a6-cc448b4ab839-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1633371820351' status='passed' stop='1633371821482'>
+                    <name>POST /session/:sessionId/element/7d3566f4-3285-4ef1-9ea0-70043ed1657e/click</name>
+                    <title>POST /session/:sessionId/element/7d3566f4-3285-4ef1-9ea0-70043ed1657e/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1633371821482' status='passed' stop='1633371821545'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='ab3bfb1d-072f-42ef-99c7-ba4fda9d54c4-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='566ef043-ba0f-4460-b36d-62be0dd20f4d-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>(intermediate value).moveToWatchesPage is not a function</message>
+                <stack-trace>TypeError: (intermediate value).moveToWatchesPage is not a function
+                    at WatchPage.openWatchesPage (/Users/anastasia/Desktop/webdriverNastya/test/pageobjects/watch.page.js:112:40)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at Context.&lt;anonymous> (/Users/anastasia/Desktop/webdriverNastya/test/specs/watches.js:21:9)
+                    at Context.executeAsync (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:136:16)
+                    at Context.testFrameworkFnWrapper (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/test-framework/testFnWrapper.js:52:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1633371821556' status='passed' stop='1633371821558'>
+            <name>should click on watch section</name>
+            <title>should click on watch section</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-94.0.4606.61'/>
+            </parameters>
+            <steps>
+                <step start='1633371821556' status='undefined'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='84640fab-4c31-4d86-88e4-5bb2685cf121-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

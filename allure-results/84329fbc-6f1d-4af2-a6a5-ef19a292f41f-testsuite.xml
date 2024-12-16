@@ -1,0 +1,101 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1633372016711' stop='1633372023622'>
+    <name>Watches Page</name>
+    <title>Watches Page</title>
+    <test-cases>
+        <test-case start='1633372016712' status='broken' stop='1633372023617'>
+            <name>"before all" hook for Watches Page</name>
+            <title>"before all" hook for Watches Page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-94.0.4606.61'/>
+            </parameters>
+            <steps>
+                <step start='1633372016715' status='passed' stop='1633372018476'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='6c121c0d-3ebf-4330-a7b9-436ee9459617-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1633372019480' status='passed' stop='1633372019498'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='e276c6f4-12b7-4c07-b7a6-7fc3d903e8b7-attachment.json' type='application/json' size='64'/>
+                        <attachment title='Response' source='8ea623b2-d8a0-4094-af80-75c3147e33af-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1633372019505' status='passed' stop='1633372022231'>
+                    <name>POST /session/:sessionId/element/c505372a-7c02-45d5-8e17-a2ca8b6b9b89/click</name>
+                    <title>POST /session/:sessionId/element/c505372a-7c02-45d5-8e17-a2ca8b6b9b89/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1633372022232' status='passed' stop='1633372022283'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='6f94717e-31d0-4d69-b855-ec7673729e42-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='eca6b9ed-48e9-4a35-8106-e1c0a5bcafe2-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1633372022286' status='passed' stop='1633372023541'>
+                    <name>POST /session/:sessionId/element/e8dec7a6-ff75-4452-bc6e-f84d298392bc/click</name>
+                    <title>POST /session/:sessionId/element/e8dec7a6-ff75-4452-bc6e-f84d298392bc/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1633372023541' status='passed' stop='1633372023605'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='8d30fbf2-1316-47ff-a300-11fa056919e0-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='5b7e0861-5132-4715-a2aa-625dd3522a0f-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>(intermediate value).moveToWatches is not a function</message>
+                <stack-trace>TypeError: (intermediate value).moveToWatches is not a function
+                    at WatchPage.openWatchesPage (/Users/anastasia/Desktop/webdriverNastya/test/pageobjects/watch.page.js:112:40)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at Context.&lt;anonymous> (/Users/anastasia/Desktop/webdriverNastya/test/specs/watches.js:21:9)
+                    at Context.executeAsync (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/shim.js:136:16)
+                    at Context.testFrameworkFnWrapper (/Users/anastasia/Desktop/webdriverNastya/node_modules/@wdio/utils/build/test-framework/testFnWrapper.js:52:18)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1633372023618' status='passed' stop='1633372023621'>
+            <name>should click on watch section</name>
+            <title>should click on watch section</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-94.0.4606.61'/>
+            </parameters>
+            <steps>
+                <step start='1633372023618' status='undefined'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='bdc462fa-b8f7-49e8-bd3e-65dd95a9af41-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

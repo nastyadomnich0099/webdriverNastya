@@ -1,16 +1,20 @@
-export const waitForTextChange = (el, text, timeout) =>{
+export const waitForTextChange = (el, text, timeout) => {
     browser.waitUntil(
-        function(){
+        function () {
             return el.getText() === text;
-        },
-        {timeout: timeout}
+        }, {
+            timeout: timeout
+        }
     );
 };
 
-export const waitAndClick = (el, timeout)=>{
+// [COMMENT] отступы
+export const waitAndClick = (el, timeout) => {
     browser.waitUntil(
-        function(){
-    el.waitForDisplayed({timeout});
-    el.click();
-         } );
+        function () {
+            el.waitForDisplayed({
+                timeout
+            });
+            el.click();
+        });
 };

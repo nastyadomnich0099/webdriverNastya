@@ -1,5 +1,7 @@
 import Page from './page';
-import {waitAndClick} from '../utilities/helper'
+import {
+    waitAndClick
+} from '../utilities/helper'
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -8,117 +10,106 @@ class WatchPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
-    get btnSubmit () { return $('button[type="submit"]') }
- 
-    get watchesButton(){return $('//a[@class="b-textlink b-textlink--parent"][text()="Watches"]')}
-    get languageBtn() {return $('#gh-eb-Geo-a-default')}
-    get languageBtn2() {return $('#gh-eb-Geo-a-en')}
-    get fashionLink() {return $('.hl-cat-nav__js-tab a[href *="Fashion"]')};
-    get watchesLink() {return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')};
+    get inputUsername() {
+        return $('#username')
+    }
+    get inputPassword() {
+        return $('#password')
+    }
+    get btnSubmit() {
+        return $('button[type="submit"]')
+    }
 
-    get  url() {return $('//a[contains(@href, "://www.ebay.com/sch/260325/i.html?_from=R40&_nkw=laptop&LH_TitleDesc=0%27")]')};
-    get watchesCategoryList() {return $$('//ul/li/a[@class="b-textlink b-textlink--sibling"]')};
-  
+    get watchesButton() {
+        return $('//a[@class="b-textlink b-textlink--parent"][text()="Watches"]')
+    }
 
+    get fashionLink() {
+        return $('.hl-cat-nav__js-tab a[href *="Fashion"]')
+    };
+    get watchesLink() {
+        return $('.hl-cat-nav__sub-cat-col a[href*="Wristwatches"]')
+    };
 
- 
+    get watchesCategoryList() {
+        return $$('//ul/li/a[@class="b-textlink b-textlink--sibling"]')
+    };
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
+    get promoBanner() {
+        return $('//div[@class="title-banner__right-image"]')
+    };
 
-    // async getWatchesCategotyList(){
-    //     console.log(await (await this.watchesCategoryList).getText()); 
+    get watchesButtonLink() {
+        return $('//a[contains(@href, "://www.ebay.com/b/Watches/260325/bn_7117208191")][@class="b-textlink b-textlink--parent"]')
+    };
 
-       
+    get watchBanner() {
+        return $('//span [@class ="b-pageheader__text"]')
+    };
 
-
-    // }
-
-    async getText(){
+    async getText() {
 
         await (await this.watchesButton).getText();
     }
 
-    async getWatchesCategotyList(){
-        var watchesList =[];
-       for (const element of await this.watchesCategoryList) {
-           let text = await element.getText();
-           await watchesList.push(text);
-       }
+
+    async getWatchesCategotyList() {
+        var watchesList = [];
+        for (const element of await this.watchesCategoryList) {
+            let text = await element.getText();
+            await watchesList.push(text);
+        }
 
         return watchesList;
     }
-    async login (username, password) {
+    async login(username, password) {
         await (await this.inputUsername).setValue(username);
         await (await this.inputPassword).setValue(password);
         await (await this.btnSubmit).click();
     }
 
 
-    async clicklink(){
+    async clicklink() {
         await (await this.watchesButton).click();
 
     }
 
-    async toHaveText(){
-        await expect (await this.watchesButton).toHaveText('Watches');
-
+    async haveWatchBanner() {
+        await (await this.watchBanner).waitForDisplayed()
     }
 
-    // async getText(){
-    //     await (await this.watchesButton).getText();
-    //     await expect (await this.watchesButton).toHaveText('Watches');
-    // }
 
+    async toHaveWatchText() {
+        await expect(await this.watchesButton).toHaveText('Watches');
 
-
+    }
 
     /**
      * overwrite specifc options to adapt it to page object
      */
-    open () {
-        return super.open('/');
-    }
-
-    async selectLanguage(){
-
-        await (await this.languageBtn).click();
-        await (await this.languageBtn2).click();
-
-       // await (await this.languageBtn).selectByVisibleText("English");
-        
-
-    }
-
-    async moveTo(){
-        await (await this.fashionLink).moveTo();
-    }
-
-    async waitForDisplayed(){
-        await (await this.watchesLink.waitForDisplayed())
-    }
-
-    async clickWatch(){
+    async clickWatch() {
         await (await this.watchesLink).click();
     }
 
-    async openWatchesPage(){
+    async openWatchesPage() {
         await (await this.fashionLink).moveTo();
-        await  browser.pause(5000);
+        await browser.pause(5000);
 
-       waitAndClick(await this.watchesLink , 5000);
-         
-
+        waitAndClick(await this.watchesLink, 5000);
     }
 
+    async toBeDisplayed() {
+        await (await this.promoBanner).toBeDisplayed()
+    }
 
+    async verifyWatchesCategLinkDisplayed(linkText) {
+        await expect (await this.watchesButtonLink).toHaveLinkContaining(linkText)
+    }
 
-  
-  
+    async verifyWatchesCategLinkClickable() {
+        await expect (await this.watchesButtonLink).toBeClickable()
+    }
+
 }
 
 export default new WatchPage();
